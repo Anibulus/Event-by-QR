@@ -33,7 +33,9 @@ public class MainActivity extends AppCompatActivity {
 
     FloatingActionButton fab;
     FloatingActionButton fabInvitados;
-    //final BD conexion=new BD(getApplicationContext());
+
+    static BD conexion= null;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        conexion=new BD(getApplicationContext());
         txtQR=findViewById(R.id.txtQR);
         txtCodigo=findViewById(R.id.txtID);
         txtEvento=findViewById(R.id.txtEvento);
@@ -60,8 +63,8 @@ public class MainActivity extends AppCompatActivity {
         fabInvitados.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //ArrayList<Invitacion> i=conexion.getListadoInvitados();
-                Toast.makeText(getApplicationContext(), "Hay un total de "+/*i.size()*/8 +" registros", Toast.LENGTH_SHORT).show();
+                Intent invitados=new Intent(getApplicationContext(),Invitados.class);
+                startActivity(invitados);
             }
         });
     }//Fin on create
@@ -85,9 +88,8 @@ public class MainActivity extends AppCompatActivity {
         //TODO mesa
 
         //Manda a guardar la informacion
-
-        //conexion.agregarInvitados(01,02,03,02);
-        Toast.makeText(getApplicationContext(), "Se ha guardado con exito", Toast.LENGTH_SHORT).show();
+        conexion.agregarInvitados(01,02,03,02);
+        Toast.makeText(getApplicationContext(), "qSe ha guardado con exito", Toast.LENGTH_SHORT).show();
     }//Fin de on result
 
     //Escaneo QR
