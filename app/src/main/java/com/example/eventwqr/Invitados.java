@@ -3,6 +3,7 @@ package com.example.eventwqr;
 import android.os.Bundle;
 
 import com.example.eventwqr.Modelo.Invitacion;
+import com.example.eventwqr.Modelo.InvitacionAdapter;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -19,6 +20,7 @@ import java.util.List;
 public class Invitados extends AppCompatActivity {
 
     RecyclerView rv;
+    InvitacionAdapter ia;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,9 +32,10 @@ public class Invitados extends AppCompatActivity {
         rv=(RecyclerView)findViewById(R.id.RVInitados);
         rv.setLayoutManager(new LinearLayoutManager(this));
 
-        =new Adaptador (MainActivity.conexion.getListadoInvitados());
-        //rv.setAdapter();
+        ia=new InvitacionAdapter(MainActivity.conexion.getListadoInvitados());
+        rv.setAdapter(ia);
         List<Invitacion> i=MainActivity.conexion.getListadoInvitados();
+
         Toast.makeText(getApplicationContext(), "Hay un total de "+i.size() +" registros", Toast.LENGTH_SHORT).show();
 
     }

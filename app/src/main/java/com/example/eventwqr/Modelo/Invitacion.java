@@ -4,11 +4,27 @@ public class Invitacion {
     private Grupo familia;
     private Mesa mesa;
     private int cantidadInvitados;
+    private int asisten;
 
     public Invitacion(Grupo familia, Mesa mesa, int cantidadInvitados) {
         this.familia = familia;
         this.mesa = mesa;
         this.cantidadInvitados = cantidadInvitados;
+    }
+
+    public Invitacion(Grupo familia, Mesa mesa, int cantidadInvitados, int asistido) {
+        this.familia = familia;
+        this.mesa = mesa;
+        this.cantidadInvitados = cantidadInvitados;
+        this.asisten=asistido;
+    }
+
+    public int getAsisten() {
+        return asisten;
+    }
+
+    public void setAsisten(int asisten) {
+        this.asisten = asisten;
     }
 
     public Grupo getFamilia() {

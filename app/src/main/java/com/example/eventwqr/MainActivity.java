@@ -4,9 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.example.eventwqr.DAO.BD;
-import com.example.eventwqr.Modelo.Invitacion;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
@@ -20,7 +18,7 @@ import android.view.MenuItem;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.ArrayList;
+import static java.lang.Integer.parseInt;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -49,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         txtCodigo=findViewById(R.id.txtID);
         txtEvento=findViewById(R.id.txtEvento);
         txtFecha=findViewById(R.id.txtFecha);
-        txtCantidad=findViewById(R.id.txtCantidad);
+        txtCantidad=findViewById(R.id.txtCantidadDeInvitadosTotal);
         txtMesa=findViewById(R.id.txtMesa);
         fab = findViewById(R.id.fab);
         fabInvitados= findViewById(R.id.faInvitados);
@@ -79,17 +77,20 @@ public class MainActivity extends AppCompatActivity {
         IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
         String datos=result.getContents();
 
+        int cantidad=parseInt(datos.substring(21,23));
+        int codigo=parseInt(datos.substring(24,25));
         //Se muestran los datos del qr en el Activity
         txtQR.setText(datos);
         txtFecha.setText("Fecha: "+(datos.substring(3,5)+"/"+datos.substring(5,7)+"/"+datos.substring(7,11)));
         txtEvento.setText("Evento: "+datos.substring(11,21));
-        txtCantidad.setText("Cantidad: "+datos.substring(21,23));
-        txtCodigo.setText("Código: "+datos.substring(24,25));
-        //TODO mesa
+        txtCantidad.setText("Cantidad: "+cantidad);
+        txtCodigo.setText("Código: "+codigo);
+        txtMesa.setText("Mesa: Modificar los QR");
+
 
         //Manda a guardar la informacion
-        conexion.agregarInvitados(01,02,03,02);
-        Toast.makeText(getApplicationContext(), "qSe ha guardado con exito", Toast.LENGTH_SHORT).show();
+        conexion.agregarInvitados(codigo,01,cantidad,02);
+        Toast.makeText(getApplicationContext(), "Se ha guardado con éxito", Toast.LENGTH_SHORT).show();
     }//Fin de on result
 
     //Escaneo QR
