@@ -9,6 +9,7 @@ import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -21,6 +22,7 @@ public class Invitados extends AppCompatActivity {
 
     RecyclerView rv;
     InvitacionAdapter ia;
+    CardView cv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +39,6 @@ public class Invitados extends AppCompatActivity {
 
         Toast.makeText(getApplicationContext(), "Hay un total de "+ia.getItemCount() +" registros", Toast.LENGTH_SHORT).show();
 
-    }
+    }//Fin de oncreate
 
-}
+}//Fin de la clase
