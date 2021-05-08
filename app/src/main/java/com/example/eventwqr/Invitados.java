@@ -34,9 +34,8 @@ public class Invitados extends AppCompatActivity {
 
         ia=new InvitacionAdapter(MainActivity.conexion.getListadoInvitados());
         rv.setAdapter(ia);
-        List<Invitacion> i=MainActivity.conexion.getListadoInvitados();
 
-        Toast.makeText(getApplicationContext(), "Hay un total de "+i.size() +" registros", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(), "Hay un total de "+ia.getItemCount() +" registros", Toast.LENGTH_SHORT).show();
 
     }
 

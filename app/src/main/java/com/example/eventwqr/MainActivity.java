@@ -15,6 +15,7 @@ import androidx.appcompat.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -29,8 +30,8 @@ public class MainActivity extends AppCompatActivity {
     TextView txtEvento;
     TextView txtCantidad;
 
-    FloatingActionButton fab;
-    FloatingActionButton fabInvitados;
+    Button fab;
+    Button fabInvitados;
 
     static BD conexion= null;
 

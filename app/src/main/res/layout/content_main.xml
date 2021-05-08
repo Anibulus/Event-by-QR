@@ -8,6 +8,39 @@
     tools:context=".MainActivity"
     tools:showIn="@layout/activity_main">
 
+    <Button
+        android:id="@+id/fab"
+        android:layout_width="220dp"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:width="250dp"
+        android:height="10dp"
+        android:text="Escanear"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.21"
+        android:background="@drawable/boton_bonito"/>
+
+    <Button
+        android:id="@+id/faInvitados"
+        android:layout_width="220dp"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:width="250dp"
+        android:height="50dp"
+        android:text="Ver lista de invitados"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fab"
+        app:layout_constraintVertical_bias="0.137"
+        tools:visibility="visible"
+        android:background="@drawable/boton_bonito"/>
+
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="372dp"
@@ -56,31 +89,6 @@
             android:layout_height="wrap_content"
             android:text="Mesa: " />
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="match_parent"
-        android:layout_height="263dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
-
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/faInvitados"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:clickable="true"
-            app:srcCompat="@android:drawable/ic_menu_sort_by_size" />
-
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fab"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:clickable="true"
-            app:srcCompat="@android:drawable/ic_menu_camera" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
