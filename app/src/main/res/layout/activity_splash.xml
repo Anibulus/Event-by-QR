@@ -2,14 +2,15 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#521D24">
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="match_parent"
         android:layout_height="280dp"
         android:layout_centerInParent="true"
-        app:srcCompat="@mipmap/ic_index_round" />
+        app:srcCompat="@mipmap/ic_anibulus_round" />
 
     <TextView
         android:id="@+id/textView"
@@ -19,14 +20,14 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="92dp"
-        android:layout_marginTop="595dp"
-        android:layout_marginEnd="92dp"
-        android:layout_marginBottom="23dp"
+        android:layout_marginStart="91dp"
+        android:layout_marginTop="547dp"
+        android:layout_marginEnd="93dp"
+        android:layout_marginBottom="71dp"
         android:gravity="center"
         android:shadowColor="@color/design_default_color_on_secondary"
         android:text="Realizado por Anibulus"
-        android:textColor="@color/design_default_color_primary_variant"
+        android:textColor="@color/design_default_color_background"
         android:textSize="18sp" />
 
     <ProgressBar
@@ -37,5 +38,17 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="34dp" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="168dp"
+        android:layout_marginEnd="168dp"
+        android:layout_marginBottom="142dp"
+        app:srcCompat="@drawable/separador_de_lista" />
 
 </RelativeLayout>

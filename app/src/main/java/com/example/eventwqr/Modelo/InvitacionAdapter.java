@@ -49,7 +49,7 @@ public class InvitacionAdapter extends RecyclerView.Adapter<InvitacionAdapter.Vi
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         //Invitados es la lista
-        holder.foto.setImageResource(invitados.get(position).getAsisten()>0?R.drawable.success:R.drawable.fail);
+        holder.foto.setImageResource(invitados.get(position).getAsisten()>0?R.drawable.success:R.drawable.failure);
         holder.cantidadLlego.setText("Asistieron: "+String.valueOf(invitados.get(position).getAsisten()));//Asisten
         holder.cantidadTotal.setText("Cantidad: "+String.valueOf(invitados.get(position).getCantidadInvitados()));//Cantidad invitados
         holder.Mesa.setText("Mesa: "+String.valueOf(invitados.get(position).getMesa().getIdMesa()));//Mesa
