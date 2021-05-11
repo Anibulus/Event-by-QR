@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.example.eventwqr.DAO.BD;
+import com.example.eventwqr.Modelo.CamaraQR;
 import com.example.eventwqr.Modelo.Invitacion;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
@@ -69,7 +70,12 @@ public class EscaneoInvitado extends AppCompatActivity {
     //Escaneo QR
     protected void lectorQR()
     {
-        new IntentIntegrator(this).initiateScan();
+        IntentIntegrator integrator = new IntentIntegrator(this);
+        integrator.setPrompt("Escanea el código QR de la invitación");
+        integrator.setOrientationLocked(true);
+        integrator.setBeepEnabled(true);
+        integrator.setCaptureActivity(CamaraQR.class);
+        integrator.initiateScan();
     }
 
 
