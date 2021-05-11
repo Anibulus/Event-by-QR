@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="280dp"
         android:layout_centerInParent="true"
-        app:srcCompat="@mipmap/ic_index_round" />
+        app:srcCompat="@mipmap/ic_anibulus_round" />
 
     <TextView
         android:id="@+id/textView"

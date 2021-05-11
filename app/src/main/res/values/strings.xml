@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">EventWQR</string>
+    <string name="app_name">Evento via QR</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_invitados">Invitados</string>
     <string name="title_activity_escaneo_invitado">EscaneoInvitado</string>
