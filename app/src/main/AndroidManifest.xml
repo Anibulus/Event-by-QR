@@ -23,15 +23,15 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".EscaneoInvitado"
-            android:label="@string/title_activity_escaneo_invitado"
+            android:label="Escaneo a invitados"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Invitados"
-            android:label="@string/title_activity_invitados"
+            android:label="Lista de invitados"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name"
+            android:label="Evento via QR"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
     </application>

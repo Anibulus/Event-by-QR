@@ -22,7 +22,6 @@ public class Invitados extends AppCompatActivity {
 
     RecyclerView rv;
     InvitacionAdapter ia;
-    CardView cv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

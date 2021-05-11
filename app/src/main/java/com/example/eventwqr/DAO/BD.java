@@ -15,7 +15,7 @@ import java.util.List;
 
 public class BD extends SQLiteOpenHelper {
     private static final String NOMBRE_BD="BD_Evento.bd";
-    private static final int VERSION_BD=7;
+    private static final int VERSION_BD=1;
     private static final String CREATE_MESA=
             "CREATE TABLE MESA (IDMESA INTEGER, CANTIDADTOTAL INT, PRIMARY KEY (IDMESA))";
     private static final String CREATE_GRUPO=

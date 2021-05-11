@@ -2,7 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#521D24">
 
     <ImageView
         android:id="@+id/imageView2"
@@ -26,7 +27,7 @@
         android:gravity="center"
         android:shadowColor="@color/design_default_color_on_secondary"
         android:text="Realizado por Anibulus"
-        android:textColor="@color/design_default_color_primary_variant"
+        android:textColor="@color/design_default_color_background"
         android:textSize="18sp" />
 
     <ProgressBar
